@@ -77,10 +77,11 @@ class BabyInfo extends Component {
                 required
                 title="Gender"
                 name="gender"
+                id={"gender-" + id}
                 onChange={this.handleInputChangeForBaby}
                 data={[
-                  { value: 'girl', label: 'Girl' },
-                  { value: 'boy', label: 'Boy' }
+                  { value: 'Girl', label: 'Girl'},
+                  { value: 'Boy', label: 'Boy'}
                 ]}
               />
 
