@@ -5,21 +5,24 @@ export default ({
   title,
   data,
   name,
+  id,
   onChange,
   required,
 }) => {
+
+  console.log(data);
   return (
     <div className="RadioGroup">
       <p>{title}  { required && <span className="required">*</span> }</p>
       <div>
         { data.map((d, i) => (
           <div key={d.value}>
-            <label htmlFor={d.value}>{d.label}</label>
+            <label htmlFor={id + i}>{d.label}</label>
             <input 
               type="radio"
-              id={d.value}
+              id={id + i}
               value={d.value}
-              name={name}
+              name={id}
               onChange={onChange(name)}
             />
           </div>
