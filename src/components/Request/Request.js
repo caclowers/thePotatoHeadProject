@@ -58,7 +58,7 @@ class Request extends Component {
 
               
                 <RequestDetail title="Weight">
-                  <p className="request-detail-data">{`${b.weightPounds} weeks`}</p>
+                  <p className="request-detail-data">{`${b.weightPounds} pounds`}</p>
                   { b.weightOunces > 0 && <p className="request-detail-data">{`${b.weightOunces} ounces`}</p> }
                 </RequestDetail>
 

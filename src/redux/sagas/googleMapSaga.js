@@ -14,7 +14,7 @@ function* getAddress(action) {
        const checkData = yield runLatandLong()
        let flag = false;
        for (let i = 0; i < checkData.length; i++) {
-           if (checkData[i].latitude == body.latitude && checkData[i].longitude == body.longitude) {
+           if (checkData[i].latitude === body.latitude && checkData[i].longitude === body.longitude) {
                flag = true;
                break;
            }
