@@ -83,6 +83,6 @@ class Cluster extends Component {
   }
 }
 
-<Cluster />
+{/* <Cluster /> */}
 
 export default connect(mapStateToProps)(Cluster)
