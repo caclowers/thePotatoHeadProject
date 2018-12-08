@@ -26,7 +26,7 @@ export default ({ style }) => (
       <h3> to The Potato Head Project</h3>
     </div>
     <div id="amazonDiv">
-      <h5>You can also Make A Difference by shopping at&nbsp;<a href="https://smile.amazon.com/" target="_parent">AmazonSmxsile</a></h5><h5> and choosing 'Potato Head Project' as your charity of choice</h5>
+      <h5>You can also Make A Difference by shopping at&nbsp;<a href="https://smile.amazon.com/" target="_parent">AmazonSmile</a></h5><h5> and choosing 'Potato Head Project' as your charity of choice</h5>
     </div>
   </div>
 );

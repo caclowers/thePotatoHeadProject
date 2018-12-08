@@ -16,26 +16,27 @@ const {
   GoogleMap,
   Marker,
 } = require("react-google-maps");
+
 const { MarkerClusterer } = require("react-google-maps/lib/components/addons/MarkerClusterer");
 
-const MapWithAMarkerClusterer = compose(
-  withProps({
-    googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyAfrUvtgh7j4JKGW6bkFPspZ4ZZ8uqlE-M&v=3.exp&libraries=geometry,drawing,places",
-    loadingElement: <div style={{ height: `100%` }} />,
-    containerElement: <div style={{ height: `400px` }} />,
-    mapElement: <div className='mapContainer'/>,
-  }),
-  withHandlers({
-    onMarkerClustererClick: () => (markerClusterer) => {
-      const clickedMarkers = markerClusterer.getMarkers();
-    },
-  }),
-  withScriptjs,
-  withGoogleMap
-)
+  const MapWithAMarkerClusterer = compose(
+    withProps({
+      googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyAfrUvtgh7j4JKGW6bkFPspZ4ZZ8uqlE-M&v=3.exp&libraries=geometry,drawing,places",
+      loadingElement: <div style={{ height: `100%` }} />,
+      containerElement: <div style={{ height: `400px` }} />,
+      mapElement: <div className='mapContainer' />,
+    }),
+    withHandlers({
+      onMarkerClustererClick: () => (markerClusterer) => {
+        const clickedMarkers = markerClusterer.getMarkers();
+      },
+    }),
+    withScriptjs,
+    withGoogleMap
+  )
 
   (googleClusterMap =>
-    <GoogleMap defaultZoom={4.5} defaultCenter={{ lat: 25.911047, lng:  -97.491602 }}>
+    <GoogleMap defaultZoom={4.5} defaultCenter={{ lat: 25.911047, lng: -97.491602 }}>
       <MarkerClusterer
         onClick={googleClusterMap.onMarkerClustererClick}
         averageCenter
@@ -44,18 +45,18 @@ const MapWithAMarkerClusterer = compose(
       >
 
         {googleClusterMap.markers.map(((marker, i) => (
-      
+
           <Marker
-          key={i}
-          visible={marker.photo_id}
-          position={{ lat: marker.latitude, lng: marker.longitude }}>
-        </Marker>
-        
-         )
-           )
-            )
-             }
-    </MarkerClusterer>
+            key={i}
+            visible={marker.photo_id}
+            position={{ lat: marker.latitude, lng: marker.longitude }}>
+          </Marker>
+
+        )
+        )
+        )
+        }
+      </MarkerClusterer>
     </GoogleMap>
   );
 

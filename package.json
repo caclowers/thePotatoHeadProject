@@ -50,8 +50,9 @@
     "redux": "^3.7.2",
     "redux-devtools-extension": "^2.13.5",
     "redux-saga": "^0.16.0",
-    "sweetalert2": "^7.26.28",
-    "sweetalert2-react-content": "^1.0.1"
+    "sweetalert2": "^7.32.0",
+    "sweetalert2-react-content": "^1.0.1",
+    "webpack-dev-server": "^3.1.6"
   },
   "scripts": {
     "start": "node server/server.js",
