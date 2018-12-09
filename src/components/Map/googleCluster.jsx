@@ -36,7 +36,7 @@ const { MarkerClusterer } = require("react-google-maps/lib/components/addons/Mar
   )
 
   (googleClusterMap =>
-    <GoogleMap defaultZoom={4.5} defaultCenter={{ lat: 25.911047, lng: -97.491602 }}>
+    <GoogleMap defaultZoom={4.5} defaultCenter={{ lat: 38.234680,  lng: -97.534106 }}>
       <MarkerClusterer
         onClick={googleClusterMap.onMarkerClustererClick}
         averageCenter
