@@ -70,7 +70,10 @@ router.put('/', (req, res) => {
                 note: req.body.note
             },
         })
-        .catch(err => res.status(400).json(err));
+        .catch(err => {
+          console.log('emailWithPreview error: ', err); 
+          res.status(400).json(err);
+        });
 
         // update Database
         Request.findByIdAndUpdate({
@@ -83,7 +86,8 @@ router.put('/', (req, res) => {
             }).then(function (response) {
                 res.sendStatus(200);
             }).catch((err) => {
-                res.sendStatus(500)
+                console.log('request error: ', err);                
+                res.sendStatus(500);
             })
     } else {
         res.sendStatus(403);
