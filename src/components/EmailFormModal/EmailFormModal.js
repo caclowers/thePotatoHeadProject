@@ -17,6 +17,14 @@ class EmailFormModal extends Component {
     this.setState({ [name]: e.target.value });
   }
 
+
+handleSubmit = () => {
+this.props.onSend({
+  ...this.state,
+  _id: this.props.opened
+})
+}
+
   render() {
     const {
       visible,
@@ -55,7 +63,7 @@ class EmailFormModal extends Component {
 
           <Button 
             title="SEND"
-            onClick={() => onSend(this.state)}
+            onClick={ this.handleSubmit }
           />
         
         </div>

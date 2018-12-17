@@ -59,7 +59,7 @@ class RequestForm extends Component {
 
   componentWillReceiveProps = nextProps => {
     if (nextProps.error) {
-      console.log('SCROLLL TO TOP')
+      console.log('SCROLLL TO TOP', nextProps.error)
       window.parent.scrollTo({
         top: 0,
         behavior: 'smooth'
@@ -335,7 +335,7 @@ class RequestForm extends Component {
 
             </div>
 
-            <div class="g-recaptcha" data-sitekey="6Ld-fG8UAAAAAJd3wpbVbW5IlaMrs3TBHd1R8_2x"></div>
+            <div className="g-recaptcha" data-sitekey="6Ld-fG8UAAAAAJd3wpbVbW5IlaMrs3TBHd1R8_2x"></div>
 
 
             <div id="submitDiv">
