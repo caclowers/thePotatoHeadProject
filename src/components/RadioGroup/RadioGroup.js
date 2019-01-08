@@ -10,7 +10,7 @@ export default ({
   required,
 }) => {
 
-  console.log(data);
+  // console.log(data);
   return (
     <div className="RadioGroup">
       <p>{title}  { required && <span className="required">*</span> }</p>

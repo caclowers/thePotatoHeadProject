@@ -48,8 +48,8 @@ export default class GoogleAutoComplete extends React.Component {
       let required = true;
       switch(key){
         case 'streetAddress2':
-        case 'floorNumber':
-        case 'roomNumber':
+        // case 'floorNumber':
+        // case 'roomNumber':
           required = false;
           break;
       }
