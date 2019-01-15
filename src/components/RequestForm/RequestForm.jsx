@@ -214,16 +214,16 @@ class RequestForm extends Component {
     )); 
     
     return (
+
       <div id="requestForm">
         {this.props.error ?
           this.handleError() :
           null
         }
 
-
-
         <div className="form">
           <span className="required" style={{ alignSelf: 'flex-end' }}>* required</span>
+          
           {babyArray}  
           
           <div id="addRemoveDiv">
@@ -303,9 +303,6 @@ class RequestForm extends Component {
             searchField={searchField}
           />
 
-
-
-
           <div id="notesDiv">
             <p className="section-title">Personal Note</p>
             <div>
@@ -336,7 +333,6 @@ class RequestForm extends Component {
             </div>
 
             <div className="g-recaptcha" data-sitekey="6Ld-fG8UAAAAAJd3wpbVbW5IlaMrs3TBHd1R8_2x"></div>
-
 
             <div id="submitDiv">
               {this.props.isLoading ?

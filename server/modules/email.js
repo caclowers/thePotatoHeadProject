@@ -29,13 +29,23 @@ const transporter = nodemailer.createTransport({
 });
 
 const email = new Email({
-    message: {
-        from: process.env.EMAIL_USERNAME
-    },
-    send: true,
-    htmlToText: false,
-    preview: false,
-    transport: transporter
+  message: {
+      from: process.env.EMAIL_USERNAME
+  },
+  send: true,
+  htmlToText: false,
+  preview: false,
+  transport: transporter
+});
+
+const adminEmail = new Email({
+  message: {
+      from: process.env.CLIENT_USER
+  },
+  send: true,
+  htmlToText: false,
+  preview: false,
+  transport: transporter
 });
 
 const emailWithPreview = new Email({
@@ -49,5 +59,6 @@ const emailWithPreview = new Email({
 
 module.exports = {
     email : email,
-    emailWithPreview : emailWithPreview
+    emailWithPreview : emailWithPreview,
+    adminEmail: adminEmail
 }
